@@ -1,0 +1,242 @@
+  @font-face {
+        font-family: "myFirstFont";
+        src: url("JinNianYeYaoJiaYouYa-2.ttf");
+    }
+
+    * {
+        margin: 0;
+        user-select: none;
+    }
+
+.wrapped{
+    height:20vh;
+    position:absolute;
+    filter:brightness(60%);
+    top:70vh;
+    right:14vw;
+}
+
+.musicbox{
+    height:12vh;
+    position:absolute;
+    top:57vh;
+    right:33vw;
+    z-index:20;
+    transition: height 0.4s ease-in-out;
+    display: none;
+}
+
+.textmain{
+    font-family: myFirstFont;
+    font-size:20px;
+    color:white;
+    position:absolute;
+    left:14vw;
+    top:40vh;
+    width:30vw;
+    height:100vh;
+}
+
+.textsecond{
+    font-family: myFirstFont;
+    font-size:20px;
+    color:white;
+    position:absolute;
+    left:45vw;
+    top:4vh;
+    width:25vw;
+    height:100vh;
+    display:none;
+}
+
+.musicbox:hover{
+    height:14vh;
+}
+
+.unwrapped{
+    height:60vh;
+    position:absolute;
+    filter:brightness(70%);
+    top:18vh;
+    right:24vw;
+    display:none;
+}
+
+.text{
+    font-family: myFirstFont;
+    font-size:40px;
+    color:white;
+    position:absolute;
+    line-height: 160%;
+    left:39vw;
+    top:40vh;
+    height:100vh;
+    display:none;
+}
+
+.memory1{
+    height:13vh;
+    position:absolute;
+    top:30vh;
+    left:15vw;
+    filter:brightness(40%);
+    transition:opacity 0.5s ease-in-out;
+}
+
+.memory1:hover{
+opacity:0;
+}
+
+.memory3:hover{
+    opacity:0;
+    }
+
+    .memory4:hover{
+        opacity:0;
+        }
+
+        .memory5:hover{
+            opacity:0;
+            }
+
+            .memory6:hover{
+                opacity:0;
+                }
+
+                .memory7:hover{
+                    opacity:0;
+                    }
+                    .memory8:hover{
+                        opacity:0;
+                        }
+
+                        .memory9:hover{
+                            opacity:0;
+                            }
+.poll-text{
+    position:absolute;
+    top:34vh;
+    left:15.5vw;
+    color:white;
+    font-family: myFirstFont;
+    display:none;
+    
+}
+
+
+.memory3{
+    height:15vh;
+    position:absolute;
+    top:40vh;
+    left:35vw;
+    filter:brightness(40%);
+    transition:opacity 0.5s ease-in-out;
+}
+
+.poll-text2{
+    position:absolute;
+    top:46vh;
+    left:40vw;
+    color:white;
+    font-family: myFirstFont;
+    display:none;
+    
+}
+
+
+.memory5{
+    height:16vh;
+    position:absolute;
+    top:55vh;
+    left:19vw;
+    filter:brightness(40%);
+    transition:opacity 0.5s ease-in-out;
+}
+
+
+.poll-text4{
+    position:absolute;
+    top:62vh;
+    left:20vw;
+    color:white;
+    font-family: myFirstFont;
+    display:none;
+    
+}
+
+.memory6{
+    height:20vh;
+    position:absolute;
+    top:40vh;
+    left:9vw;
+    z-index:-1;
+    filter:brightness(40%);
+    transition:opacity 0.5s ease-in-out;
+}
+
+
+.poll-text5{
+    position:absolute;
+    top:49vh;
+    left:12vw;
+    color:white;
+    font-family: myFirstFont;
+    display:none;
+    
+}
+
+.memory7{
+    height:20vh;
+    position:absolute;
+    top:30vh;
+    left:30vw;
+    filter:brightness(40%);
+    transition:opacity 0.5s ease-in-out;
+}
+
+.poll-text6{
+    position:absolute;
+    top:38vh;
+    left:32vw;
+    color:white;
+    font-family: myFirstFont;
+    display:none;
+    
+}
+
+.cd{
+    height:9vh;
+    position:absolute;
+    filter:brightness(80%);
+    top:13vh;
+    right:15.5vw;
+    transition:rotate 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.cd:hover{
+    rotate:calc(360deg);
+}
+
+.blanket{
+   height:45vh;
+    position:fixed;
+    left:1vw;
+    top:35vh;
+    filter:brightness(140%);
+    cursor:pointer;
+    display:none;
+}
+
+.key{
+    height:8vh;
+    position:absolute;
+    left:28vw;
+    top:43vh;
+    cursor:pointer;
+    display:none;
+    z-index:400;
+}
+
+
+
