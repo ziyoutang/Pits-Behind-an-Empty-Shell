@@ -1,0 +1,136 @@
+  @font-face {
+        font-family: "myFirstFont";
+        src: url("JinNianYeYaoJiaYouYa-2.ttf");
+    }
+
+    * {
+        margin: 0;
+        user-select: none;
+    }
+
+    .textfirst{
+        font-family: myFirstFont;
+        font-size:20px;
+        color:rgb(77, 45, 14);
+        position:absolute;
+        left:14vw;
+        top:45vh;
+        height:100vh;
+        rotate:calc(-28deg);
+        text-shadow: 5px 5px 5px rgb(243, 203, 129);
+    }
+
+    .textmainone{
+        font-family: myFirstFont;
+        font-size:20px;
+        color:rgb(77, 45, 14);
+        position:absolute;
+        left:30vw;
+        top:42vh;
+        height:100vh;
+        rotate:calc(10deg);
+
+    }
+
+    .textmaintwo{
+        font-family: myFirstFont;
+        font-size:20px;
+        color:rgb(77, 45, 14);
+        position:absolute;
+        left:30vw;
+        top:42vh;
+        width:30vw;
+        height:100vh;
+        rotate:calc(10deg);
+        
+    }
+
+    .play{
+        font-family: myFirstFont;
+        font-size:20px;
+        color:rgb(194, 141, 50);
+        position:absolute;
+        left:15vw;
+        top:83vh;
+        display:none;
+    }
+
+    .duck{
+        height:15vh;
+        position:absolute;
+        top:77vh;
+        left:25vw;
+        cursor: pointer;
+        transition: height 0.3s ease-in-out;
+    }
+
+    .duck:hover{
+        height:17vh;
+    }
+
+
+    .open{
+        height:40vh;
+        position:absolute;
+        top:38vh;
+        left:35vw;
+    }
+
+    .quote{
+        height:50vh;
+        position:absolute;
+        left:3vw;
+        top:0vh;
+        rotate:calc(-25deg);
+        display:hidden;
+    }
+
+    .block{
+        height:15vh;
+        position:absolute;
+        left:10vw;
+        top:17vh;
+        filter:brightness(80%);
+        transition: filter 0.3s ease-in-out;
+    }
+
+    .beads{
+        height:80vh;
+        position:absolute;
+        right:15vw;
+        top:-5vh;
+        rotate:calc(20deg);
+        transition: rotate 0.4s ease-in-out;
+        cursor: pointer;
+    }
+
+    .stars{
+        height:60vh;
+        position:absolute;
+        top:3vh;
+        display:hidden;
+    }
+
+    .bookopen{
+        position:absolute;
+        top:13vh;
+        left:15vw;
+        height:80vh;
+        filter:brightness(140%);
+    }
+
+    .block:hover{
+        filter:brightness(110%);
+    }
+    .hat{
+        height:50vh;
+        position:absolute;
+        top:38vh;
+        left:37.5vw;
+        cursor: pointer;
+    }
+
+    .hat:hover{
+        filter:brightness(180%);
+    }
+
