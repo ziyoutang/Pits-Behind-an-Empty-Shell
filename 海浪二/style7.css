@@ -1,0 +1,70 @@
+  @font-face {
+        font-family: "myFirstFont";
+        src: url("JinNianYeYaoJiaYouYa-2.ttf");
+    }
+
+    * {
+        margin: 0;
+        user-select: none;
+    }
+
+
+    .textfirst{
+        font-family: myFirstFont;
+        font-size:20px;
+        color:rgb(255, 255, 255);
+        position:absolute;
+        left:3vw;
+        top:10vh;
+        height:100vh;
+    }
+
+
+    .textsecond{
+        font-family: myFirstFont;
+        font-size:20px;
+        color:rgb(255, 255, 255);
+        position:absolute;
+        left:3vw;
+        top:30vh;
+        height:100vh;
+    }
+
+    .bin{
+        height:25vh;
+        position:absolute;
+        top:60vh;
+        left:20vh;
+        z-index:20;
+        transition: rotate 0.5s ease-in-out;
+    }
+
+    .bin:hover{
+        rotate:calc(360deg);
+    }
+
+    .swing{
+        height:90vh;
+        position:absolute;
+        right:30vh;
+    }
+
+    .sun{
+        height:13vh;
+        position:absolute;
+        top:67vh;
+        right:43vh;
+        rotate:calc(30deg);
+        cursor: pointer;
+    }
+
+    .wave{
+        height:13vh;
+        position:absolute;
+        top:80vh;
+        right:50vw;
+    }
+
+
+
+
