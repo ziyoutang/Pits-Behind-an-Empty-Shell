@@ -1,0 +1,113 @@
+
+    @font-face {
+        font-family: "myFirstFont";
+        src: url("JinNianYeYaoJiaYouYa-2.ttf");
+    }
+
+    * {
+        margin: 0;
+        user-select: none;
+    }
+
+    .laptop{
+        height:130vh;
+        position:absolute;
+        left:20vw;
+        top:10vh;
+    }
+
+    .laptop2{
+        height:130vh;
+        position:absolute;
+        left:20vw;
+        top:10vh;
+        z-index:-20;
+        display:none;
+    }
+
+    .vintage{
+        height:40vh;
+        position:absolute;
+        top:70vh;
+    }
+
+    .text{
+        font-family: myFirstFont;
+        color:rgb(10, 24, 53);
+        position:absolute;
+        line-height: 160%;
+        left:3vw;
+        width:16vw;
+        top:76vh;
+        height:100vh;
+        text-shadow:3px 10px 10px rgba(255, 255, 255, 0.331);
+    }
+
+    .text2{
+        font-family: myFirstFont;
+        color:rgb(10, 24, 53);
+        position:absolute;
+        line-height: 160%;
+        left:3vw;
+        width:16vw;
+        top:76vh;
+        height:100vh;
+        display:none;
+        text-shadow:3px 10px 10px rgba(255, 255, 255, 0.331);
+    }
+
+    .ink{
+        height:60vh;
+        position:absolute;
+        right:7vw;
+        top:30vh;
+        cursor: pointer;
+        transition: height 0.3s ease-in-out, filter 0.3s ease-in-out;
+    }
+
+    .ink:hover{
+        height:63vh;
+        filter:brightness(200%);
+    }
+
+    .stars{
+        height:100vh;
+    }
+
+    .video-container {
+        position:fixed;
+        left:-14.5vw;
+        top:-22vh;
+        scale:38.5%;
+        z-index:3000;
+        display:none;
+        filter:brightness(60%);
+    }
+
+ 
+
+    .cover{
+        height:20vh;
+        position:absolute;
+        left:32vw;
+        top:18.5vh;
+        transition:height 0.3s ease-in-out, top 0.4s ease-in-out, box-shadow 0.3s ease-out;
+        cursor: pointer;
+        z-index:200;
+    }
+    .cover:hover{
+        height:20.5vh;
+        top:18vh;
+        box-shadow:2px 0px 5px 5px rgb(165, 201, 255) ;
+    }
+
+    .wanglian{
+        font-family: myFirstFont;
+        writing-mode: vertical-rl;
+        color:white;
+        position:absolute;
+        line-height: 160%;
+        right:11vw;
+        top:40vh;
+        height:100vh;
+    }
