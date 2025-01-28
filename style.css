@@ -1,0 +1,223 @@
+
+    @font-face {
+        font-family: "myFirstFont";
+        src: url("JinNianYeYaoJiaYouYa-2.ttf");
+    }
+
+    * {
+        margin: 0;
+        user-select: none;
+    }
+
+    .start{
+        font-size:20px;
+        z-index:5;
+        text-align:center;
+        font-family: myFirstFont;
+        position:absolute;
+        top:34vh;
+        left:27vw;
+    }
+
+    .title{
+        position:absolute;
+        width:13vw;
+        top:30vh;
+        left:40vw;
+    }
+
+    .full {
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .sun {
+        display: none;
+        width: 100vw;
+        position: absolute;
+        top: 0vh;
+    }
+
+    .windowsize {
+        display: none;
+        background-color: rgb(29, 24, 24);
+        color: white;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 5;
+        font-family: myFirstFont;
+        font-size: 24px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .blogbutton {
+        position: absolute;
+        width: 7vw;
+        bottom: 27vh;
+        left: 3vw;
+        transition: width 0.5s;
+        cursor: pointer;
+    }
+
+    .blogbuttonopen{
+        position: absolute;
+        width: 10vw;
+        display:none;
+        bottom: 27vh;
+        left: 3vw;
+        cursor: pointer;
+    }
+
+    #water{
+        position:absolute;
+        bottom:10vh;
+        width:24vw;
+        right:25vw;
+        cursor:pointer;
+    }
+
+    .poem{
+        position:absolute;
+        height:25vh;
+        top:22vh;
+        left:25vw;
+        display:none;
+    }
+
+    .poemword{
+        color:rgb(243, 155, 159);
+    }
+
+    .poemword:hover{
+        font-size:30px;
+    }
+
+    .intropng{
+        position: absolute;
+        width: 6vw;
+        display:none;
+        bottom: 40vh;
+        left: 5vw;
+        cursor: pointer;
+    }
+
+    .zheng:hover{
+        text-shadow:5px 20px 3px rgb(95, 255, 220);
+        text-shadow:5px 5px 2px rgb(255, 132, 132);
+        font-style: italic;
+
+
+    }
+
+    .intropng:hover{
+        width:7vw;
+        box-shadow:5px 5px 3px rgb(255, 255, 255);
+    }
+
+    .note{
+        width:30vw;
+        position:fixed;
+        left:35vw;
+        top:22vh;
+        display: none;
+        box-shadow:6px 5px 10px 4px rgba(0, 0, 0, 0.489);
+
+    }
+
+    .deca1{
+        width:20vw;
+        position:fixed;
+        left:35vw;
+        top:22vh;
+        display: none;
+
+    }
+
+    .deca2{
+        width:12vw;
+        position:fixed;
+        left:40vw;
+        top:41vh;
+        display: none;
+        z-index:10;
+        box-shadow:5px 5px 3px rgb(255, 255, 255);
+
+    }
+
+    .deca3{
+        width:10vw;
+        position:fixed;
+        left:35vw;
+        top:50vh;
+        display: none;
+
+    }
+
+    .deca4{
+        width:17vw;
+        position:fixed;
+        left:47.5vw;
+        top:53vh;
+        display: none;
+        box-shadow:5px 5px 3px rgb(255, 255, 255);
+
+    }
+
+
+    .date{
+        width:23vw;
+        position:fixed;
+        left:48vw;
+        top:25vh;
+        display: none;
+
+    }
+
+
+    .light {
+        position: absolute;
+        width: 17vw;
+        top: -6vh;
+        transition: width 0.5s;
+        cursor: pointer;
+    }
+
+    .blogbutton:hover {
+        width: 10vw;
+    }
+
+    .tap {
+        position: absolute;
+        width: 3vw;
+        filter: brightness(170%);
+        bottom: 8vh;
+        left: 45vw;
+    }
+
+    .shower {
+        position: absolute;
+        width: 17vw;
+        right: 10vw;
+        top: 30vh;
+        transition: width 0.5s;
+    }
+
+    @keyframes moveUpDown {
+        0%, 100% {
+            transform: translateY(0); /* Initial and final position */
+        }
+        50% {
+            transform: translateY(-10px); /* Move up */
+        }
+    }
+
+    @media screen and (max-width: 1250px), (max-height: 700px), (max-width: 500px) {
+        .windowsize {
+            display: flex;
+            z-index: 10;
+            font-size: 20px;
+        }
+    }
