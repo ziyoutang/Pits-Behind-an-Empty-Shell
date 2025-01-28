@@ -1,0 +1,139 @@
+  @font-face {
+        font-family: "myFirstFont";
+        src: url("JinNianYeYaoJiaYouYa-2.ttf");
+    }
+
+    * {
+        margin: 0;
+        user-select: none;
+    }
+
+
+    .textfirst{
+        font-family: myFirstFont;
+        font-size:18px;
+        color:rgb(255, 255, 255);
+        position:absolute;
+        left:33vw;
+        top:20vh;
+        width:20vw;
+        height:100vh;
+        text-align: center;
+    }
+
+    .speaker{
+        height:20vh;
+        position:absolute;
+      top:73vh;
+        left:10vw;
+        filter:brightness(140%);
+        cursor: pointer;
+    }
+
+    .towel{
+        height:17vh;
+        position:absolute;
+        top:58vh;
+        right:30vw;
+    }
+
+    .album1{
+        height:30vh;
+        position:absolute;
+      top:30vh;
+        left:17vw;
+        filter:brightness(150%);
+        box-shadow: 10px 10px 10px rgb(255, 207, 136);
+        transition: filter 0.3s ease-in-out;
+    }
+
+    .albumtext1{
+        font-family: myFirstFont;
+        font-size:18px;
+        position:absolute;
+        top:70vh;
+        left:34vw;
+        color:white;
+
+    }
+
+    .albumtext2{
+        font-family: myFirstFont;
+        font-size:18px;
+        position:absolute;
+        top:70vh;
+        left:30vw;
+        color:white;
+
+    }
+
+    .albumtext3{
+        font-family: myFirstFont;
+        font-size:18px;
+        position:absolute;
+        top:70vh;
+        left:33vw;
+        color:white;
+
+    }
+
+    .album1:hover{
+        filter:brightness(200%);
+    }
+
+    .album1:active{
+        filter:brightness(200%);
+    }
+
+    .album2{
+        height:30vh;
+        position:absolute;
+        top:30vh;
+        left:40vw;
+        filter:brightness(150%);
+        box-shadow: 10px 10px 10px rgb(255, 207, 136);
+        transition: filter 0.3s ease-in-out;
+    }
+
+    .album2:hover{
+        filter:brightness(200%);
+    }
+
+    .album2:active{
+        filter:brightness(200%);
+    }
+
+
+    .album3{
+        height:30vh;
+        position:absolute;
+        top:30vh;
+        left:65vw;
+        filter:brightness(150%);
+        box-shadow: 10px 10px 10px rgb(255, 207, 136);
+    }
+
+    .broom{
+        height:60vh;
+        position:absolute;
+        left:40vw;
+        top:45vh;
+        cursor: pointer;
+
+    }
+
+    .black{
+        height:200vh;
+        position:absolute;
+        top:-10vh;
+        opacity:50%;
+        z-index:-20;
+    }
+
+    .ashtray{
+        height:5vh;
+        position:fixed;
+        top:90vh;
+        left:45vw;
+        z-index:-20;
+    }
