@@ -1,0 +1,150 @@
+
+    @font-face {
+        font-family: "myFirstFont";
+        src: url("JinNianYeYaoJiaYouYa-2.ttf");
+    }
+
+    * {
+        margin: 0;
+        user-select: none;
+    }
+
+    #typing-animation{
+        color:white;
+        font-size:20px;
+        z-index:5;
+        text-align:center;
+        width:20vw;
+        font-family: myFirstFont;
+        position:absolute;
+        top:36vh;
+        left:40vw;
+        color:white;
+        white-space:pre-wrap;
+    }
+
+    .car{
+        height:102vh;
+        width:100vw;
+        cursor: pointer;
+    }
+
+    .mirror{
+        height:13vh;
+        position:fixed;
+        left:40vw;
+        top:14vh;
+        z-index:20;
+        rotate:calc(-2deg);
+    }
+
+    .yellow{
+        height:300vh;
+        position:fixed;
+        left:0vw;
+        opacity:0;
+    }
+
+
+    .light{
+        height:50vh;
+        z-index:20;
+        position:absolute;
+        right:20vw;
+        top:5vh;
+        filter:brightness(30%);
+        transition: filter 0.7s ease-in-out;
+        cursor: pointer;
+    }
+
+    .light:hover{
+        filter:none;
+    }
+
+    .light:active{
+        height:55vh;
+    }
+
+    .record{
+        height:9vh;
+        position:absolute;
+        bottom:15vh;
+        left:47vw;
+        z-index:30;
+        transition: rotate 0.3s ease-in-out;
+    }
+
+    .record:hover{
+        rotate:calc(360deg);
+    }
+
+    .note{
+        height:50vh;
+        position:absolute;
+        bottom:25vh;
+        left:37vw;
+        z-index:30;
+        display:none;
+        rotate:calc(10deg);
+    }
+
+    .diary{
+        height:80vh;
+        position:absolute;
+        bottom:7vh;
+        left:10vw;
+        z-index:30;
+        display:none;
+    }
+
+
+    .post{
+        height:15vh;
+        position:absolute;
+        bottom:13vh;
+        right:20vw;
+        z-index:30;
+    }
+
+
+
+
+    .full {
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .windowsize {
+        display: none;
+        background-color: rgb(29, 24, 24);
+        color: white;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 5;
+        font-family: myFirstFont;
+        font-size: 24px;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+
+
+    @keyframes moveUpDown {
+        0%, 100% {
+            transform: translateY(0); /* Initial and final position */
+        }
+        50% {
+            transform: translateY(-10px); /* Move up */
+        }
+    }
+
+    @media screen and (max-width: 1250px), (max-height: 700px), (max-width: 500px) {
+        .windowsize {
+            display: flex;
+            z-index: 10;
+            font-size: 20px;
+        }
+    }
