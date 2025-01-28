@@ -1,0 +1,148 @@
+  @font-face {
+        font-family: "myFirstFont";
+        src: url("JinNianYeYaoJiaYouYa-2.ttf");
+    }
+
+    * {
+        margin: 0;
+        user-select: none;
+    }
+
+
+    .firsttext{
+        font-family: myFirstFont;
+        font-size:20px;
+        color:rgb(255, 255, 255);
+        position:absolute;
+        left:3vw;
+        top:10vh;
+        height:100vh;
+    }
+
+    .secondtext{
+        font-family: myFirstFont;
+        font-size:20px;
+        color:rgb(255, 255, 255);
+        position:absolute;
+        right:3vw;
+        top:17vh;
+        height:100vh;
+    }
+
+    .textdetail{
+        color:rgb(40, 82, 63);
+        transition: font-size 0.4s ease-in-out;
+        text-decoration: none;
+    }
+
+    a:hover, a:visited, a:link, a:active
+{
+    text-decoration: none;
+}
+
+    .fire{
+        height:15vh;
+        position:absolute;
+        left:45vw;
+        top:13vh;
+        z-index:-2;
+
+    }
+
+    .textdetail:hover{
+       font-size:30px;
+       font-style:italic;
+
+    }
+
+    .thirdtext{
+            font-family: myFirstFont;
+            font-size:20px;
+            color:rgb(255, 255, 255);
+            position:absolute;
+           left:3vw;
+            top:25vh;
+            height:100vh;
+        }
+
+        .greentext{
+            font-family: myFirstFont;
+            font-size:16px;
+            color:rgb(255, 255, 255);
+            position:absolute;
+            right:12vw;
+            top:58vh;
+            height:100vh;
+        }
+
+        .lyrics{
+            font-family: myFirstFont;
+            font-size:24px;
+            color:rgb(255, 255, 255);
+            position:absolute;
+           left:31vw;
+            top:56vh;
+            height:100vh;
+            z-index:20;
+
+        }
+
+        .green{
+            height:4vh;
+            position:absolute;
+            top:37vh;
+            left:30vw;
+            filter:brightness(180%);
+            transition: height 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        .green:hover{
+            height:6vh;
+        }
+
+        .light{
+            filter:contrast(40%);
+            width: 100vw;
+            position: absolute;
+            top: 0vh;
+        }
+        
+    .grass{
+        height:24vh;
+        position:absolute;
+        right:10vw;
+        top:50vh;
+        filter: brightness(50%);
+
+    }
+
+    .wave{
+        height:50vh;
+        position:absolute;
+        top:27vh;
+        right:25vw;
+    }
+
+    .face{
+        height:23vh;
+        position:absolute;
+        right:10vw;
+        top:50vh;
+        cursor: pointer;
+    }
+
+    .sun{
+        height:16vh;
+        position:absolute;
+        top:65vh;
+        right:40vw;
+        cursor: pointer;
+    }
+
+    .guitar{
+        height:30vh;
+        position:absolute;
+        top:59vh;
+        left:15vw;
+    }
