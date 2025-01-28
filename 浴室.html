@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="浴室/style4.css">
+
+    <title>浴室</title>
+    <link rel="icon" href="icon.png">
+</head>
+
+<style>
+    body {
+        background-image: url("浴室/bg.png");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+        overflow: hidden;
+        filter: brightness(100%);
+    }
+
+    .unwrapped {
+        display: none; /* Initially hide the unwrapped image */
+    }
+
+    .image-container, .poll-text, .musicbox, .image-container2, .poll-text2, .image-container3, .poll-text3, .image-container4, .poll-text4, .image-container5, .poll-text5, .image-container6, .poll-text6, .image-container7, .poll-text7, .image-container8, .poll-text8, .blanket, .key, .textsecond {
+        display: none; /* Initially hide the image containers, poll texts, musicbox, blanket, key, and textsecond */
+    }
+
+    .memory1,
+    .memory2,
+    .memory3,
+    .memory4,
+    .memory5,
+    .memory6,
+    .memory7,
+    .memory8 {
+        filter: brightness(40%);
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    .memory1 {
+        height: 13vh;
+        position: absolute;
+        top: 30vh;
+        left: 15vw;
+    }
+
+    .memory2 {
+        height: 15vh;
+        position: absolute;
+        top: 35vh;
+        left: 25vw;
+    }
+
+    .memory3 {
+        height: 15vh;
+        position: absolute;
+        top: 40vh;
+        left: 35vw;
+    }
+
+    .memory4 {
+        height: 16vh;
+        position: absolute;
+        top: 45vh;
+        left: 45vw;
+    }
+
+    .memory5 {
+        height: 16vh;
+        position: absolute;
+        top: 55vh;
+        left: 19vw;
+    }
+
+    .memory6 {
+        height: 20vh;
+        position: absolute;
+        top: 40vh;
+        left: 9vw;
+        z-index: -1;
+    }
+
+    .memory7 {
+        height: 20vh;
+        position: absolute;
+        top: 30vh;
+        left: 30vw;
+    }
+
+    .memory8 {
+        height: 18vh;
+        position: absolute;
+        top: 50vh;
+        left: 50vw;
+    }
+
+    .poll-text,
+    .poll-text2,
+    .poll-text3,
+    .poll-text4,
+    .poll-text5,
+    .poll-text6,
+    .poll-text7,
+    .poll-text8 {
+        position: absolute;
+        color: white;
+        font-family: myFirstFont;
+        display: none;
+    }
+
+    .poll-text {
+        top: 34vh;
+        left: 15.5vw;
+    }
+
+    .poll-text2 {
+        top: 38vh;
+        left: 26vw;
+    }
+
+    .poll-text3 {
+        top: 46vh;
+        left: 40vw;
+    }
+
+    .poll-text4 {
+        top: 50vh;
+        left: 46vw;
+    }
+
+    .poll-text5 {
+        top: 62vh;
+        left: 20vw;
+    }
+
+    .poll-text6 {
+        top: 49vh;
+        left: 12vw;
+    }
+
+    .poll-text7 {
+        top: 38vh;
+        left: 32vw;
+    }
+
+    .poll-text8 {
+        top: 54vh;
+        left: 52vw;
+    }
+
+
+</style>
+
+<body>
+    <img class="wrapped" src="浴室/wrapped.PNG">
+    <img class="unwrapped" src="浴室/unwrapped.PNG">
+    <img class="musicbox" src="浴室/musicbox.PNG">
+    <img class="cd" src="浴室/cd.PNG">
+    <img class="blanket" src="浴室/blanket.PNG">
+    <a href="浴室二.html"><img class="key" src="浴室/key.PNG"></a>
+    
+    <div class="text">终于忘记你的时候</br> 你出现在我梦里</div>
+    <div class="textmain">回忆是一个美妙的负担。
+    </br>《浴室》让我回忆、再次回想、42度的水蒸气化作你的人影。
+</br>我让时间反复冲洗我的记忆，但却在梦中再次跟你相见。
+</br>其实，任何人都会这样吧。
+</br>我会梦见一个跟我毫无相关的人，从而跟他发生渊源，在断落之后，又再次梦见。</div>
+
+<div class="textsecond">其实仔细思考一下，《浴室》的编曲并不伤感，</br>
+    就像是沐浴露挤了太多，冒出彩色泡泡后再捅破它之后的温馨。</br></br>可能回忆最终还是美好的吧....</div>
+
+    <div class="image-container">
+        <img class="memory1" src="浴室/memory1.JPG">
+        <p class="poll-text">五年级之梦</p>
+    </div>
+
+    <div class="image-container2">
+        <img class="memory2" src="浴室/memory2.JPEG">
+        <p class="poll-text2">第一次穿礼服</p>
+    </div>
+
+    <div class="image-container3">
+        <img class="memory3" src="浴室/memory3.JPEG">
+        <p class="poll-text3">拍立得</p>
+    </div>
+
+    <div class="image-container4">
+        <img class="memory4" src="浴室/memory4.jpg">
+        <p class="poll-text4">睡成流口水的小猪</p>
+    </div>
+
+    <div class="image-container5">
+        <img class="memory5" src="浴室/memory5.jpg">
+        <p class="poll-text5">还没长齐的牙齿</p>
+    </div>
+
+    <div class="image-container6">
+        <img class="memory6" src="浴室/memory6.jpg">
+        <p class="poll-text6">拍立得</p>
+    </div>
+
+    <audio id="music" src="浴室/浴室.mp3"></audio>
+
+    <script>
+        $(document).ready(function() {
+            $(".wrapped").click(function() {
+                $(".wrapped").hide(); // Hide the wrapped image
+                $(".textmain").hide();
+                $(".unwrapped").show(); // Show the unwrapped image
+                $(".text").show();
+                $(".musicbox").show(); // Show the musicbox
+            });
+
+            $(".unwrapped").click(function() {
+                $(".unwrapped").hide(); // Hide the unwrapped image
+                $(".text").hide();
+                $(".wrapped").show(); // Show the wrapped image
+                $(".musicbox").hide(); // Hide the musicbox
+                $(".image-container, .poll-text, .image-container2, .poll-text2, .image-container3, .poll-text3, .image-container4, .poll-text4, .image-container5, .poll-text5, .image-container6, .poll-text6, .image-container7, .poll-text7, .image-container8, .poll-text8").show(); // Show all image containers and poll texts
+            });
+
+            // Hover effect for memory images to set opacity to 0 and keep it
+            $(".memory1, .memory2, .memory3, .memory4, .memory5, .memory6, .memory7, .memory8").hover(
+                function() {
+                    $(this).css("opacity", 0);
+                    checkOpacity();
+                }
+            );
+
+            // Play music when musicbox is clicked
+            $(".musicbox").click(function() {
+                var music = document.getElementById("music");
+                music.play();
+            });
+
+            function checkOpacity() {
+                var allHidden = true;
+                $(".memory1, .memory2, .memory3, .memory4, .memory5, .memory6, .memory7, .memory8").each(function() {
+                    if ($(this).css("opacity") != "0") {
+                        allHidden = false;
+                    }
+                });
+                if (allHidden) {
+                    $(".blanket").show(); // Show the blanket
+                }
+            }
+
+            // Show key and type text when blanket is clicked
+            $(".blanket").click(function() {
+                $(".key").show();
+                $(".textsecond").show();
+                typeText('.textsecond');
+            });
+
+            // Function to type text letter by letter
+            function typeText(selector) {
+                var element = $(selector);
+                var text = element.text();
+                element.html('');
+                var i = 0;
+                function typing() {
+                    if (i < text.length) {
+                        element.append(text.charAt(i));
+                        i++;
+                        setTimeout(typing, 50);
+                    }
+                }
+                typing();
+            }
+        });
+    </script>
+
+</body>
+
+</html>

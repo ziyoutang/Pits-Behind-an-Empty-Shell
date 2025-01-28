@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="大雨/style1.css">
+
+    <title>大雨</title>
+    <link rel="icon" href="icon.png">
+</head>
+
+<style>
+    body {
+        background-image: url("大雨/bg.png");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+        overflow: hidden;
+        filter: brightness(100%);
+    }
+
+    .car, .car.brighten {
+        filter: brightness(90%); /* Reduce brightness by 10% */
+    }
+</style>
+
+<body>
+    <div class="full windowsize">
+        <div style="width: 60%; margin: auto;">
+            坑洼只显露于全屏探索，请切换到全屏<br><br>
+            Please move to a full-screen monitor to perceive lakes of mud
+        </div>
+    </div>
+
+    <div id="typing-animation"></div>
+    <img class="mirror" src="大雨/mirror.PNG">
+
+    <audio id="silentAudio" style="display:none" autoplay>
+        <source src="silence.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="myAudio" style="display:none">
+        <source src="大雨/大雨.mp3" type="audio/mpeg">
+    </audio>
+
+    <img class="car" src="大雨/car.PNG">
+    <a href="大雨二.html"><img class="light" src="大雨/light.PNG"></a>
+    <img class="record" src="大雨/record.jpeg">
+    <img class="post" src="大雨/post.PNG">
+    <img src="始/note.PNG" class="note" id="indexnote">
+    <img src="大雨/diary.png" class="diary" id="indexdiary">
+    <img src="大雨/yellow.jpg" class="yellow">
+</body>
+
+<script>
+    var text = "大雨\n就要开始不停的下 \n我的心 我的心\n已经完全的没有主张\n带我到没有爱情的地方喔。。。";
+    var speed = 130; // The speed of the typing animation in milliseconds
+    var typingAnimationElement = document.getElementById("typing-animation");
+    var index = 0;
+    var brightnessLevel = 100;
+
+    function type() {
+        if (index < text.length) {
+            typingAnimationElement.innerHTML += text.charAt(index);
+            index++;
+            setTimeout(type, speed);
+        }
+    }
+
+    type();
+
+    function increaseBrightness() {
+        if (brightnessLevel < 100) {
+            brightnessLevel += 10;
+            document.body.style.filter = "brightness(" + brightnessLevel + "%)";
+            document.querySelectorAll('.car, .light, .record, .post, #typing-animation').forEach(element => {
+                element.style.filter = "brightness(" + brightnessLevel + "%)";
+            });
+        }
+    }
+
+    function resetBrightness() {
+        brightnessLevel = 100;
+        document.body.style.filter = "brightness(100%)";
+        document.querySelectorAll('.car, .light, .record, .post, #typing-animation').forEach(element => {
+            element.style.filter = "brightness(90%)";
+        });
+    }
+
+    $(document).ready(function() {
+        const car = document.querySelector('.car');
+        const post = document.querySelector('.post');
+        const note = document.querySelector('.note');
+        const diary = document.querySelector('.diary');
+        const textElement = document.getElementById("typing-animation");
+
+        post.addEventListener('click', function() {
+            const elementsToHide = document.querySelectorAll('.car, .light, .record, .post, #typing-animation');
+            elementsToHide.forEach(element => {
+                if (element !== car) {
+                    element.style.display = 'none';
+                } else {
+                    element.classList.add('brighten'); // Add brighten class to the car
+                }
+            });
+            note.style.display = 'block';
+            diary.style.display = 'block';
+            increaseBrightness();
+        });
+
+        diary.addEventListener('click', function() {
+            const elementsToShow = document.querySelectorAll('.car, .light, .record, .post, #typing-animation');
+            elementsToShow.forEach(element => {
+                element.style.display = 'block';
+                element.classList.remove('brighten'); // Remove brighten class from all elements
+            });
+            note.style.display = 'none';
+            diary.style.display = 'none';
+            resetBrightness();
+        });
+
+        // Play the audio when the page loads
+        var audio = document.getElementById("myAudio");
+        audio.play().catch(function(error) {
+            console.log("Autoplay was prevented. Trying to play the audio after a user interaction.");
+            // Try to play the audio again on a user interaction
+            $(document).one('click', function() {
+                audio.play();
+            });
+        });
+    });
+</script>
+
+<script>
+    // Your existing JavaScript code
+
+    $(document).ready(function() {
+        const car = document.querySelector('.car');
+        const light = document.querySelector('.light');
+        const yellow = document.querySelector('.yellow');
+        const post = document.querySelector('.post');
+        const note = document.querySelector('.note');
+        const diary = document.querySelector('.diary');
+        const textElement = document.getElementById("typing-animation");
+        let opacityLevels = [0.4];
+        let currentOpacityIndex = 0;
+        let isLightActive = false;
+
+        post.addEventListener('click', function() {
+            const elementsToHide = document.querySelectorAll('.car, .light, .record, .post, #typing-animation');
+            elementsToHide.forEach(element => {
+                if (element !== car) {
+                    element.style.display = 'none';
+                } else {
+                    element.classList.add('brighten'); // Add brighten class to the car
+                }
+            });
+            note.style.display = 'block';
+            diary.style.display = 'block';
+            increaseBrightness();
+            light.classList.add('active'); // Activate the light
+        });
+
+        diary.addEventListener('click', function() {
+            const elementsToShow = document.querySelectorAll('.car, .light, .record, .post, #typing-animation');
+            elementsToShow.forEach(element => {
+                element.style.display = 'block';
+                element.classList.remove('brighten'); // Remove brighten class from all elements
+            });
+            note.style.display = 'none';
+            diary.style.display = 'none';
+            resetBrightness();
+            light.classList.remove('active'); // Deactivate the light
+            isLightActive = false;
+            currentOpacityIndex = 0; // Reset opacity index
+        });
+
+        light.addEventListener('click', function() {
+            light.classList.toggle('active');
+            if (light.classList.contains('active')) {
+                isLightActive = true;
+            } else {
+                isLightActive = false;
+                currentOpacityIndex = 0; // Reset opacity index
+            }
+
+            if (isLightActive) {
+                yellow.style.opacity = opacityLevels[currentOpacityIndex];
+                currentOpacityIndex = (currentOpacityIndex + 1) % opacityLevels.length;
+            }
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function() {
+        const light = document.querySelector('.light');
+
+        light.addEventListener('click', function() {
+            setTimeout(function() {
+                window.location.href = "https://www.example.com"; // Replace with your desired URL
+            }, 2000); // Delay of 2 seconds (2000 milliseconds) before redirecting
+        });
+    });
+</script>
+
+</html>

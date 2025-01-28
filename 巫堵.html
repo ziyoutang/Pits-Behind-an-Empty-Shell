@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="巫堵/style10.css">
+
+    <title>巫堵</title>
+    <link rel="icon" href="icon.png">
+</head>
+
+
+<style>
+    body {
+        background-image: url("巫堵/bg.png");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+        overflow: hidden;
+        filter: brightness(100%);
+    }
+    .hidden {
+        display: none;
+    }
+
+
+</style>
+
+<body>
+    <div class="textfirst">在巫堵中，我看到了deca joins的摇滚。</br></br>
+        我爱这种颓废的摇滚，让我感到醉酒般的放肆。</br>
+        我从巫堵中看到了deca joins 抗拒规则的叛逆，但也看到了有条不紊的自律。</br>
+    </br>叛逆是勇敢恣意的泉源，自律是无畏向前的底气。</br>
+</br>够深奥。</div>
+
+<img class="man" src="巫堵/man.PNG">
+<a href="终.html"><img class="cigarette" src="巫堵/cigarette.PNG"></a>
+
+<audio id="audio" src="巫堵/巫堵.mp3"></audio>
+
+</body>
+
+<script>
+          $(".man").click(function(){
+                var audio = document.getElementById("audio");
+                if (audio.paused) {
+                    audio.play();
+                } else {
+                    audio.pause();
+                }
+            });
+</script>

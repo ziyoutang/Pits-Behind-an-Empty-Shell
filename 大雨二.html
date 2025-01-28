@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="大雨二/style3.css">
+
+    <title>大雨2</title>
+    <link rel="icon" href="icon.png">
+</head>
+
+<style>
+    body {
+        background-image: url("大雨二/bg.png");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+        overflow: hidden;
+        filter: brightness(100%);
+    }
+
+    .video-container {
+        display: none; /* Initially hide the video container */
+        position: absolute;
+        z-index: 1; /* Set z-index higher than other elements */
+    }
+
+    .laptop2 {
+        display: none; /* Initially hide the laptop2 image */
+        position: absolute;
+        z-index: 2; /* Set z-index higher than original laptop but lower than video-container */
+    }
+
+    .laptop {
+        position: absolute;
+        z-index: 1; /* Original laptop image */
+    }
+
+    .text2, .text3, .text4 {
+        display: none; /* Hide text2, text3, and text4 initially */
+    }
+</style>
+
+<body>
+    <img class="laptop" src="大雨二/laptop.PNG">
+    <img class="laptop2" src="大雨二/laptop2.PNG">
+    <a href="浴室.html"><img class="ink" src="大雨二/ink.PNG"></a>
+    <img class="cover" src="大雨二/cover.PNG">
+    <img class="vintage" src="大雨二/vintage.jpeg">
+
+    <div class="wanglian">deca joins跟我完全就是随缘的网恋</br>只能说是当时无趣中的一抹深蓝色。 
+    </div> 
+    <div class="text">2022年在平常不过的下午，大雨MV封面中的女主穿着高领缎面蓝色长裙向我凝视。
+    </br>可能是眼角的泪，或许是过于厚重的腮红让我点进视频。</div>
+    <div class="text2">却被撑着伞的郑敬儒顿时吸引：</br>长发、圆镜、撑伞和突然响起的梦幻流行单线贝斯</br>从此deca joins就成为了我生命涣散但不失焦点的聚焦光。</div>
+    <div class="text3">娃娃的《大雨》是电子贝斯的狂欢，deca joins改编的《大雨》是高速下柔和鼓点中的厌世浪漫。</div>
+    <div class="text4">我不懂音乐，但我懂《大雨》音旋中活着和厌烦活着的浪漫。</div>
+
+    <div class="video-container">
+        <video id="myVideo" controls autoplay>
+            <source src="大雨二/大雨.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <div id="youtube"> <!-- Placeholder for the YouTube element -->
+        <!-- Add your YouTube iframe or other content here -->
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $(".cover").click(function() {
+                $(".video-container").show(); // Show the video container
+                $(".laptop2").show(); // Show the laptop2 image
+                $("#youtube").hide(); // Hide the YouTube element
+                $(".laptop").hide(); // Hide the laptop image
+                $(".cover").hide(); // Hide the cover image
+
+                // Autoplay the video
+                var video = document.getElementById("myVideo");
+                video.play();
+            });
+
+            let textCounter = 1; // Initialize counter for text replacement
+
+            $(".vintage").click(function() {
+                let newText;
+                switch (textCounter) {
+                    case 1:
+                        newText = $(".text2").html();
+                        break;
+                    case 2:
+                        newText = $(".text3").html();
+                        break;
+                    case 3:
+                        newText = $(".text4").html();
+                        break;
+                    default:
+                        return; // Stop cycling after text4
+                }
+                $(".text").html(newText); // Replace the content of text with the new content
+                textCounter++; // Increment counter
+            });
+        });
+    </script>
+</body>
+
+</html>

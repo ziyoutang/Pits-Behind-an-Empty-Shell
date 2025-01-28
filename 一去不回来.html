@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="一去不回来/style9.css">
+
+    <title>一去不回来</title>
+    <link rel="icon" href="icon.png">
+</head>
+
+<style>
+    body {
+        background-image: url("一去不回来/bg.png");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+        overflow: hidden;
+        filter: brightness(100%);
+    }
+    .hidden {
+        display: none;
+    }
+    .typing {
+        border-right: .15em solid orange; /* cursor */
+        white-space: nowrap;
+        overflow: hidden;
+        animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+    }
+    @keyframes typing {
+        from { width: 2% }
+        to { width: 20% }
+    }
+    @keyframes blink-caret {
+        from, to { border-color: transparent }
+        50% { border-color: orange; }
+    }
+</style>
+
+<body>
+   <a href="巫堵.html"><img class="light" src="一去不回来/light.PNG"></a> 
+    <img class="phone" src="一去不回来/phone.PNG">
+    <img class="smoke" src="一去不回来/smoke.PNG">
+    <img class="letter" src="一去不回来/letter.PNG">
+    <img class="open hidden" src="一去不回来/open.PNG">
+    <img class="screen hidden" src="一去不回来/screen.PNG">
+    <div class="textfirst">你会不会一去不回来？</br>
+        我在烟里等你
+    </div>
+
+    <div class="textsecond hidden">我想我能想起的只有一去不回来的朋友和一去不回来的暗恋。</br></br>
+        你说4年级的暗恋是什么真的喜欢吗？</br>
+        肯定不是，但那段回忆我却留恋了6年。</br>
+        现在忙碌到没时间回忆，我才意识到是自己的成长让记忆真的一去不回来，让人崩溃就如3:33爆发的和声和电杂音。
+    </div>
+
+    <div class="textthird hidden">其实我还没经历过什么
+    </br>真正的离别：</br>我跟我父亲的离别，</br>往往是短暂几个月的离别。</br>但当然
+</br>我们也还是会在线上见面。
+    </div>
+
+    <audio id="audio" src="一去不回来/一去不回来.mp3"></audio>
+
+    <script>
+        $(document).ready(function(){
+            $(".letter").click(function(){
+                $(this).addClass("hidden");
+                $(".open, .textsecond").removeClass("hidden");
+                $(".light, .phone, .smoke, .textfirst").addClass("hidden");
+            });
+
+            $(".open").click(function(){
+                $(this).addClass("hidden");
+                $(".letter").removeClass("hidden");
+                $(".light, .phone, .smoke, .textfirst").removeClass("hidden");
+                $(".textsecond").addClass("hidden");
+            });
+
+            $(".phone").click(function(){
+                $(".light, .phone, .smoke, .letter, .textfirst, .open, .textsecond").addClass("hidden");
+                $(".screen").removeClass("hidden");
+                $(".textthird").removeClass("hidden").addClass("typing");
+            });
+
+            $(".screen").click(function(){
+                $(this).addClass("hidden");
+                $(".textthird").addClass("hidden").removeClass("typing");
+                $(".light, .phone, .smoke, .letter, .textfirst").removeClass("hidden");
+            });
+        });
+
+        $(".phone").click(function(){
+                var audio = document.getElementById("audio");
+                if (audio.paused) {
+                    audio.play();
+                } else {
+                    audio.pause();
+                }
+            });
+    </script>
+</body>
+
+</html>

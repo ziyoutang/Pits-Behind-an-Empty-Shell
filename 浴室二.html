@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="浴室二/style5.css">
+
+    <title>浴室二</title>
+    <link rel="icon" href="icon.png">
+</head>
+
+<style>
+    body {
+        background-image: url("浴室二/bg.png");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+        overflow: hidden;
+        filter: brightness(100%);
+    }
+    .hidden {
+        display: none;
+    }
+</style>
+
+<body>
+    <div class="textfirst">再次听《浴室》，我爱上了《浴室（2019 Reprise）》。</div>
+    <img class="duck" src="浴室二/duck.PNG">
+    <img class="open hidden" src="浴室二/open.PNG">
+    <img class="quote hidden" src="浴室二/quote.PNG">
+    <img class="hat" src="浴室二/hat.PNG">
+    <img class="block" src="浴室二/block.PNG">
+    <img class="stars hidden" src="浴室二/stars.gif">
+    <a href="海浪.html"><img class="beads" src="浴室二/beads.PNG"></a>
+    <img class="bookopen hidden" src="浴室二/bookopen.png">
+    <div class="play">播放《浴室》</div>
+    <div class="textmainone hidden">可能是因为里面的叠音和回音
+    </br>这次我关注的并不是忘记后再次在梦中相遇的宿命
+</br>而是
+</br></br>
+        单纯只想把日子过得不浪费</br>
+        我就是你的人 而这就是我的人生
+    </div>
+    <div class="textmaintwo hidden">毫无犹豫，我将这两句歌词设为我的毕业文案。</br>
+        其实我思考过要不要删去「我就是你的人」
+    </br>我妈听说我把这两句定为文案时大笑说「你好像谈恋爱上头了一样」
+</br>说实话，我保留这一句并没有什么意义
+</br>可能更多是尊重郑敬儒原本想表达的意义吧...
+    </div>
+
+    <!-- Audio element -->
+    <audio id="audio" src="浴室二/浴室二.mp3"></audio>
+
+    <script>
+        $(document).ready(function(){
+            let bookOpenClicked = 0;
+
+            $(".hat").click(function(){
+                $(".hat").addClass("hidden");
+                $(".open").removeClass("hidden");
+            });
+
+            $(".open").click(function(){
+                $("body > *:not(.bookopen, .textmainone, body)").addClass("hidden");
+                $(".bookopen, .textmainone").removeClass("hidden");
+            });
+
+            $(".bookopen").click(function(){
+                if (bookOpenClicked === 0) {
+                    $(".textmainone").addClass("hidden");
+                    $(".textmaintwo").removeClass("hidden");
+                    bookOpenClicked = 1;
+                } else {
+                    // Restore original state before hat was clicked
+                    $("body > *").removeClass("hidden");
+                    $(".bookopen, .textmainone, .textmaintwo, .open, .quote, .stars").addClass("hidden");
+                    bookOpenClicked = 0;
+                }
+            });
+
+            // Functionality for block and quote
+            $(".block").click(function(){
+                $(".stars").removeClass("hidden");
+                $(".block").addClass("hidden");
+                $(".quote").removeClass("hidden");
+            });
+
+            $(".quote").click(function(){
+                $(".stars").addClass("hidden");
+                $(".block").removeClass("hidden");
+                $(".quote").addClass("hidden");
+            });
+
+            // Hover functionality for duck and play
+            $(".duck").hover(function(){
+                $(".play").show();
+            }, function(){
+                $(".play").hide();
+            });
+
+            // Click functionality for duck to play music
+            $(".duck").click(function(){
+                var audio = document.getElementById("audio");
+                if (audio.paused) {
+                    audio.play();
+                } else {
+                    audio.pause();
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

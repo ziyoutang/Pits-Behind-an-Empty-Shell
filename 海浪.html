@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="海浪/style6.css">
+
+    <title>海浪</title>
+    <link rel="icon" href="icon.png">
+</head>
+
+<style>
+    body {
+        background-image: url("海浪/bg.png");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+        overflow: hidden;
+        filter: brightness(100%);
+    }
+    .hidden {
+        display: none;
+    }
+</style>
+
+<body>
+    <div class="firsttext">我对生命没什么定义，我也不知道我的出生有什么意义。</div>
+    <div class="secondtext">哦，或许我可以非常中二的说一句，我是为摇滚、艺术和诗歌而诞生</div>
+    <div class="thirdtext">我也可以更加带有激情的说一句<a href="海浪二.html"><span class="textdetail">「我的出生就是一件很摇滚的事！！」  </span> </a> </div>
+    <div class="lyrics hidden">这就是我的生活
+       太阳在坠落
+        海浪在发愁
+        不停地退后
+        </div>
+    <img class="grass hidden" src="海浪/grass.PNG">
+    <img class="face" src="海浪/face.PNG">
+    <img class="guitar" src="海浪/guitar.PNG">
+    <img class="sun" src="海浪/sun.PNG">
+    <img class="light hidden" src="始/sun.png">
+    <img class="wave hidden" src="海浪/wave.PNG">
+    <img class="green" src="海浪/green.PNG">
+    <img class="fire hidden" src="海浪/fire.PNG">
+    <div class="greentext hidden">作为一个「悲哀的空壳」</br>这时人类会奔向自然。
+    </div>
+
+
+    <audio id="audio" src="海浪/海浪1.mp3"></audio>
+
+    <script>
+        $(document).ready(function(){
+            $(".face").click(function(){
+                $(".grass").removeClass("hidden");
+                $(".greentext").removeClass("hidden");
+                $(".face").addClass("hidden");
+            });
+
+            // Animate guitar left and right
+            function animateGuitar() {
+                $(".guitar").animate({left: '+=100px'}, 1000, function() {
+                    $(".guitar").animate({left: '-=100px'}, 1000, animateGuitar);
+                });
+            }
+            animateGuitar();
+
+            // Show light when sun is clicked
+            $(".sun").click(function(){
+                $(".light").removeClass("hidden");
+                $(".lyrics").removeClass("hidden");
+                $(".wave").removeClass("hidden");
+                $(".sun, .guitar, .face, .firsttext, .secondtext, .thirdtext, .green").addClass("hidden");
+
+            });
+
+            $(".light, .wave").click(function(){
+                $(".light").addClass("hidden");
+                $(".wave, .lyrics").addClass("hidden");
+                $(".sun, .guitar, .face, .firsttext, .secondtext, .thirdtext, .green").removeClass("hidden");
+            });
+
+            $(".textdetail").hover(function(){
+                $(".fire").removeClass("hidden");
+            }, function(){
+                $(".fire").addClass("hidden");
+            });
+
+            $(".green").click(function(){
+                var audio = document.getElementById("audio");
+                if (audio.paused) {
+                    audio.play();
+                } else {
+                    audio.pause();
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
