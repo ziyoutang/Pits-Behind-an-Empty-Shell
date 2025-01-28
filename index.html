@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width">
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css"> 
+        <script src="script.js"></script>
+        
+        <title>始</title>
+        <link rel="icon" href="icon.png">
+    </head>
+
+    <style>
+        body {
+            background-image: url("始/bg.png");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+            overflow: hidden;
+      
+            background-color: black;
+        }
+    </style>
+
+<body>
+    <div class="full windowsize">
+        <div style="width: 60%; margin: auto;">
+            坑洼只显露于全屏探索，请切换到全屏<br><br>
+            Please move to a full-screen monitor to perceive lakes of mud
+        </div>
+    </div>
+
+    <div class="start"><br><br><br><span class="zheng">郑敬儒说他是「悲哀的空壳」。<br>
+        其实人人皆是。<br></span>
+        <br><br>
+       <div style="color:rgba(255, 255, 255, 0.457);"> 即印刷了自己的<span class="poemword">诗集</span>之后，这是第二个、直接致敬deca joins的作品。
+        <br>在最忙的申请季，我选择用自己闲下来的所有时间去探索空壳后的坑洼，<br>讲述一个再普通不过的高中生对deca joins的迷恋。</div> 
+        </div>
+
+    <img src="始/kaiduan.png" class="title" id="indextitle">    
+    <img src="始/shell.PNG" class="blogbutton" id="indexblogbutton">
+    <img src="始/shellopen.PNG" class="blogbuttonopen" id="indexblogbuttonopen">
+    <img src="始/light.PNG" class="light" id="indexlight">
+    <img src="始/tap.PNG" class="tap" id="indextap">
+    <img src="始/shower.png" class="shower" id="indexshower">
+    <img src="始/sun.png" class="sun" id="indexsun">
+    <img src="始/note.PNG" class="note" id="indexnote">
+    <img src="始/intro.png" class="intropng" id="indexintropng">
+    <a href="大雨.html">
+        <img id="water"src="始/water.PNG"></a>
+    <img src="始/deca1.jpg" class="deca1" id="indexdeca1">
+    <img src="始/deca2.jpg" class="deca2" id="indexdeca2">
+    <img src="始/deca3.jpg" class="deca3" id="indexdeca3">
+    <img src="始/deca4.jpg" class="deca4" id="indexdeca4">
+    <img src="始/date.png" class="date" id="indexdate">
+    <img src="始/poem.png" class="poem" id="poem">
+
+    <audio id="myAudio" controls style="display: none;">
+        <source src="music/Intro.mp3" type="audio/mp3">
+    </audio>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const intropng = document.getElementById('indexintropng');
+            const audio = document.getElementById('myAudio');
+
+            intropng.addEventListener('click', function() {
+                audio.play();
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function(){
+  $("#water").draggable();
+  $("#ground").draggable();
+  $("#grass").draggable();
+  $("#men").draggable();
+  $("#lake").draggable();
+  $("#xiaoyu2").draggable();
+  $("#backfire").draggable();
+})
+
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const blogButton = document.getElementById('indexblogbutton');
+            const blogButtonOpen = document.getElementById('indexblogbuttonopen');
+            const intropng = document.getElementById('indexintropng');
+
+            blogButton.addEventListener('click', function() {
+                blogButton.style.display = 'none';
+                blogButtonOpen.style.display = 'block';
+                intropng.style.display = 'block';
+            });
+        });
+    </script>
+
+    <script>
+
+$(document).ready(function(){
+            const elementsToHide = document.querySelectorAll('.start, .title, .blogbutton, .tap, .shower, #water');
+            const light = document.querySelector('.light');
+            const sun = document.querySelector('.sun');
+            const note = document.querySelector('.note');
+            const deca1 = document.querySelector('.deca1');
+            const deca2 = document.querySelector('.deca2');
+            const deca3 = document.querySelector('.deca3');
+            const deca4 = document.querySelector('.deca4');
+            const date = document.querySelector('.date');
+
+            light.addEventListener('click', function() {
+                if (sun.style.display !== 'none') {
+                    sun.style.display = 'none';
+                    note.style.display = 'none';
+                    deca1.style.display = 'none';
+                    deca2.style.display = 'none';
+                    deca3.style.display = 'none';
+                    deca4.style.display = 'none';
+                    date.style.display = 'none';
+                    elementsToHide.forEach(element => {
+                        element.style.display = 'block';
+                    });
+                } else {
+                    elementsToHide.forEach(element => {
+                        element.style.display = 'none';
+                    });
+                    sun.style.display = 'block';
+                    note.style.display = 'block';
+                    deca1.style.display = 'block';
+                    deca2.style.display = 'block';
+                    deca3.style.display = 'block';
+                    deca4.style.display = 'block';
+                    date.style.display = 'block';
+                }
+            });
+
+            note.addEventListener('click', function() {
+                sun.style.display = 'none';
+                note.style.display = 'none';
+                deca1.style.display = 'none';
+                    deca2.style.display = 'none';
+                    deca3.style.display = 'none';
+                    deca4.style.display = 'none';
+                    date.style.display = 'none';
+                elementsToHide.forEach(element => {
+                    element.style.display = 'block';
+                });
+            });
+        });
+    </script>
+
+<script>
+    const triggerElement = document.querySelector('.poemword');
+const newElement = document.querySelector('.poem');
+
+triggerElement.addEventListener('mouseenter', function() {
+newElement.style.display = 'block';
+});
+
+triggerElement.addEventListener('mouseleave', function() {
+newElement.style.display = 'none';
+});
+
+
+
+</script>
+
+  
+</body>
+
+
+<script>
+    alert("空壳的坑洼中隐藏着后摇滚\n探索空壳，去找寻找deca joins的叛逆与自律。");
+
+</script>
+
+</html>
